@@ -66,7 +66,7 @@ namespace WebApplication1.Config
                 ExceptionHandler = new RequestHandlerMiddleware().InvokeAsync
             });
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();

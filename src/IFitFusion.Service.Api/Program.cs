@@ -14,6 +14,9 @@ builder.Services.AddSwaggerConfig();
 builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
 builder.Services.AddDependenciesExtensions(builder.Configuration);
 
+var port = Environment.GetEnvironmentVariable("PORT") ?? "7012";
+builder.WebHost.UseUrls($"http://*:{port}");
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
