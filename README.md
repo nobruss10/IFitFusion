@@ -1,1 +1,1 @@
-# IfitFusion
+# IFitFusion
