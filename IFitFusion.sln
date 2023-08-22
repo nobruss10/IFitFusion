@@ -24,6 +24,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IFitFusion.Infrastructure.CrossCutting.IoC", "src\IFitFusion.Infrastructure.CrossCutting.IoC\IFitFusion.Infrastructure.CrossCutting.IoC.csproj", "{846E9B94-8232-41AC-8ABD-FDCBE4D6F401}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IFitFusion.Service.Api", "src\IFitFusion.Service.Api\IFitFusion.Service.Api.csproj", "{C199EA99-766D-4AC6-AC13-C60AD07F852E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1604E64F-E66A-4FFC-A3F6-DC4BE06E875C} = {1604E64F-E66A-4FFC-A3F6-DC4BE06E875C}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.1", "5.1", "{1391BC95-D07D-4F7B-9910-0C57C55E1A4C}"
 EndProject
