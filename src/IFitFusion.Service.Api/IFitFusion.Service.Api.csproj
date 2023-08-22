@@ -18,7 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\IFitFusion.Infrastructure.CrossCutting.Helpers\IFitFusion.Infrastructure.CrossCutting.Helpers.csproj" />
     <ProjectReference Include="..\IFitFusion.Infrastructure.CrossCutting.DomainHelper\IFitFusion.Infrastructure.CrossCutting.DomainHelper.csproj" />
     <ProjectReference Include="..\IFitFusion.Infrastructure.CrossCutting.IoC\IFitFusion.Infrastructure.CrossCutting.IoC.csproj" />
   </ItemGroup>
