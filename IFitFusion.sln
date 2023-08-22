@@ -31,7 +31,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FitFusion.Infrastructure.Da
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IFitFusion.Application", "src\Sequenza.Pricefy.Application\IFitFusion.Application.csproj", "{1604E64F-E66A-4FFC-A3F6-DC4BE06E875C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IFitFusion.Infrastructure.CrossCutting.Helpers", "src\IFitFusion.Infrastructure.CrossCutting.Helpers\IFitFusion.Infrastructure.CrossCutting.Helpers.csproj", "{53A2D0F9-C6DF-4E99-8A0D-FD21FC724E62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IFitFusion.Infrastructure.CrossCutting.Helpers", "src\IFitFusion.Infrastructure.CrossCutting.Helpers\IFitFusion.Infrastructure.CrossCutting.Helpers.csproj", "{53A2D0F9-C6DF-4E99-8A0D-FD21FC724E62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

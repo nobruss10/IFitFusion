@@ -7,19 +7,29 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY src/FitFusion.Infrastructure.Data/FitFusion.Infrastructure.Data.csproj src/FitFusion.Infrastructure.Data/FitFusion.Infrastructure.Data.csproj
-COPY src/IFitFusion.Application/IFitFusion.Application.csproj src/IFitFusion.Application/IFitFusion.Application.csproj
-COPY src/IFitFusion.Domain/IFitFusion.Domain.csproj src/IFitFusion.Domain/IFitFusion.Domain.csproj
-COPY src/IFitFusion.Infrastructure.CrossCutting.DomainHelpe/IFitFusion.Infrastructure.CrossCutting.DomainHelper.csproj src/IFitFusion.Infrastructure.CrossCutting.DomainHelpe/IFitFusion.Infrastructure.CrossCutting.DomainHelper.csproj
-COPY src/IFitFusion.Infrastructure.CrossCutting.Helpers/IFitFusion.Infrastructure.CrossCutting.Helpers.csproj src/IFitFusion.Infrastructure.CrossCutting.Helpers/IFitFusion.Infrastructure.CrossCutting.Helpers.csproj
-COPY src/IFitFusion.Infrastructure.CrossCutting.IoC/IFitFusion.Infrastructure.CrossCutting.IoC.csproj src/IFitFusion.Infrastructure.CrossCutting.IoC/IFitFusion.Infrastructure.CrossCutting.IoC.csproj
+COPY ["FitFusion.Infrastructure.Data/FitFusion.Infrastructure.Data.csproj", "FitFusion.Infrastructure.Data/"]
+RUN dotnet restore "FitFusion.Infrastructure.Data/FitFusion.Infrastructure.Data.csproj"
+
+COPY ["IFitFusion.Application/IFitFusion.Application.csproj", "IFitFusion.Application/"]
+RUN dotnet restore "IFitFusion.Application/IFitFusion.Application.csproj"
+
+COPY ["IFitFusion.Domain/IFitFusion.Domain.csproj", "IFitFusion.Domain/"]
+RUN dotnet restore "IFitFusion.Domain/IFitFusion.Domain.csproj"
+
+COPY ["IFitFusion.Infrastructure.CrossCutting.DomainHelpe/IFitFusion.Infrastructure.CrossCutting.DomainHelper.csproj", "IFitFusion.Infrastructure.CrossCutting.DomainHelpe/"]
+RUN dotnet restore "IFitFusion.Infrastructure.CrossCutting.DomainHelpe/IFitFusion.Infrastructure.CrossCutting.DomainHelper.csproj"
+
+COPY ["IFitFusion.Infrastructure.CrossCutting.Helpers/IFitFusion.Infrastructure.CrossCutting.Helpers.csproj", "IFitFusion.Infrastructure.CrossCutting.Helpers"]
+RUN dotnet restore "IFitFusion.Infrastructure.CrossCutting.Helpers/IFitFusion.Infrastructure.CrossCutting.Helpers.csproj"
+
+COPY ["IFitFusion.Infrastructure.CrossCutting.IoC/IFitFusion.Infrastructure.CrossCutting.IoC.csproj", "IFitFusion.Infrastructure.CrossCutting.IoC/"]
+RUN dotnet restore "IFitFusion.Infrastructure.CrossCutting.IoC/IFitFusion.Infrastructure.CrossCutting.IoC.csproj"
 
 
-
-COPY ["src/IFitFusion.Service.Api/IFitFusion.Service.Api.csproj", "src/IFitFusion.Service.Api/"]
-RUN dotnet restore "src/IFitFusion.Service.Api/IFitFusion.Service.Api.csproj"
+COPY ["IFitFusion.Service.Api/IFitFusion.Service.Api.csproj", "IFitFusion.Service.Api/"]
+RUN dotnet restore "IFitFusion.Service.Api/IFitFusion.Service.Api.csproj"
 COPY . .
-WORKDIR "/src/src/IFitFusion.Service.Api"
+WORKDIR "/src/IFitFusion.Service.Api"
 RUN dotnet build "IFitFusion.Service.Api.csproj" -c Release -o /app/build
 
 FROM build AS publish
