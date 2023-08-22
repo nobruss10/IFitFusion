@@ -27,11 +27,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IFitFusion.Service.Api", "s
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.1", "5.1", "{1391BC95-D07D-4F7B-9910-0C57C55E1A4C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FitFusion.Infrastructure.Data", "src\FitFusion.Infrastructure.Data\FitFusion.Infrastructure.Data.csproj", "{37C52CE9-B7A8-459A-B8F9-EFF6E46CDD60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IFitFusion.Infrastructure.Data", "src\FitFusion.Infrastructure.Data\IFitFusion.Infrastructure.Data.csproj", "{37C52CE9-B7A8-459A-B8F9-EFF6E46CDD60}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IFitFusion.Application", "src\Sequenza.Pricefy.Application\IFitFusion.Application.csproj", "{1604E64F-E66A-4FFC-A3F6-DC4BE06E875C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IFitFusion.Infrastructure.CrossCutting.Helpers", "src\IFitFusion.Infrastructure.CrossCutting.Helpers\IFitFusion.Infrastructure.CrossCutting.Helpers.csproj", "{53A2D0F9-C6DF-4E99-8A0D-FD21FC724E62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IFitFusion.Infrastructure.CrossCutting.Helpers", "src\IFitFusion.Infrastructure.CrossCutting.Helpers\IFitFusion.Infrastructure.CrossCutting.Helpers.csproj", "{53A2D0F9-C6DF-4E99-8A0D-FD21FC724E62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

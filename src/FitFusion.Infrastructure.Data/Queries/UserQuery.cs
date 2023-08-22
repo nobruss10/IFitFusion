@@ -1,7 +1,7 @@
 ﻿using IFitFusion.Domain.Entities;
 using System.Data;
 
-namespace FitFusion.Infrastructure.Data.Queries
+namespace IFitFusion.Infrastructure.Data.Queries
 {
     public static class UserQuery
     {

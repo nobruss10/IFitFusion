@@ -1,4 +1,4 @@
-﻿namespace FitFusion.Infrastructure.Data.Queries
+﻿namespace IFitFusion.Infrastructure.Data.Queries
 {
     public static class PlannedExerciseQuery
     {

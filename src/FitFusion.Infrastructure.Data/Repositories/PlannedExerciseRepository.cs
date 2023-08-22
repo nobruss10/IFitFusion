@@ -1,9 +1,9 @@
-﻿using FitFusion.Infrastructure.Data.Queries;
+﻿using IFitFusion.Infrastructure.Data.Queries;
 using IFitFusion.Domain.Entities;
 using IFitFusion.Domain.Repositories;
 using Microsoft.Extensions.Configuration;
 
-namespace FitFusion.Infrastructure.Data.Repositories
+namespace IFitFusion.Infrastructure.Data.Repositories
 {
     public class PlannedExerciseRepository : BaseRepository, IPlannedExerciseRepository
     {

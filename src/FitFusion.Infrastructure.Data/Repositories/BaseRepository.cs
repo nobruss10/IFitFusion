@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace FitFusion.Infrastructure.Data.Repositories
+namespace IFitFusion.Infrastructure.Data.Repositories
 {
 
     public abstract class BaseRepository

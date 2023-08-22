@@ -1,4 +1,4 @@
-﻿using FitFusion.Infrastructure.Data.Repositories;
+﻿using IFitFusion.Infrastructure.Data.Repositories;
 using IFitFusion.Application.ApplicationServices;
 using IFitFusion.Application.Interfaces;
 using IFitFusion.Domain.Repositories;

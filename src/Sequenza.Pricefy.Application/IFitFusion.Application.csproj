@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FitFusion.Infrastructure.Data\FitFusion.Infrastructure.Data.csproj" />
     <ProjectReference Include="..\IFitFusion.Domain\IFitFusion.Domain.csproj" />
     <ProjectReference Include="..\IFitFusion.Infrastructure.CrossCutting.DomainHelper\IFitFusion.Infrastructure.CrossCutting.DomainHelper.csproj" />
   </ItemGroup>

@@ -1,11 +1,11 @@
 ﻿using Dapper;
-using FitFusion.Infrastructure.Data.Queries;
+using IFitFusion.Infrastructure.Data.Queries;
 using IFitFusion.Domain.Entities;
 using IFitFusion.Domain.Repositories;
 using Microsoft.Extensions.Configuration;
 using System.Data;
 
-namespace FitFusion.Infrastructure.Data.Repositories
+namespace IFitFusion.Infrastructure.Data.Repositories
 {
     public class UserRepository : BaseRepository, IUserRepository
     {

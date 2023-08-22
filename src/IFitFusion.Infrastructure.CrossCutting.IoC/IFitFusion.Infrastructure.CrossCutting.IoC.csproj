@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FitFusion.Infrastructure.Data\FitFusion.Infrastructure.Data.csproj" />
+    <ProjectReference Include="..\FitFusion.Infrastructure.Data\IFitFusion.Infrastructure.Data.csproj" />
     <ProjectReference Include="..\IFitFusion.Domain\IFitFusion.Domain.csproj" />
     <ProjectReference Include="..\IFitFusion.Infrastructure.CrossCutting.DomainHelper\IFitFusion.Infrastructure.CrossCutting.DomainHelper.csproj" />
     <ProjectReference Include="..\Sequenza.Pricefy.Application\IFitFusion.Application.csproj" />
