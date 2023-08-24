@@ -7,6 +7,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+var portVar = Environment.GetEnvironmentVariable("PORT");
+if (portVar is { Length: > 0 } && int.TryParse(portVar, out int port))
+    builder.WebHost.UseUrls($"http://*:{port}");
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
