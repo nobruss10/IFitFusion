@@ -1,11 +1,14 @@
+using IFitFusion.Service.Api.Config;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.Extensions.Options;
+using Swashbuckle.AspNetCore.SwaggerGen;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.WebApiConfig();
+builder.Services.AddSwaggerConfig();
+builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
 
 var portVar = Environment.GetEnvironmentVariable("PORT");
 if (portVar is { Length: > 0 } && int.TryParse(portVar, out int port))
@@ -14,16 +17,7 @@ if (portVar is { Length: > 0 } && int.TryParse(portVar, out int port))
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
+app.UseMvcConfiguration();
+app.UseSwaggerConfig(builder.Services?.BuildServiceProvider().GetRequiredService<IApiVersionDescriptionProvider>()!);
 
 app.Run();
