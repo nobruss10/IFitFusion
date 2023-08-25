@@ -27,9 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Domain\" />
     <Folder Include="Extensions\" />
-    <Folder Include="Infrastructure\" />
     <Folder Include="Middlewares\" />
     <Folder Include="Exceptions\" />
     <Folder Include="Models\" />
