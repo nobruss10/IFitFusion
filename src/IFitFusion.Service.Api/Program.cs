@@ -1,4 +1,5 @@
 using IFitFusion.Service.Api.Config;
+using IFitFusion.Service.Api.Infrastructure.Ioc;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.SwaggerGen;
@@ -9,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.WebApiConfig();
 builder.Services.AddSwaggerConfig();
 builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
+builder.Services.AddDependenciesExtensions(builder.Configuration);
 
 var portVar = Environment.GetEnvironmentVariable("PORT");
 if (portVar is { Length: > 0 } && int.TryParse(portVar, out int port))
